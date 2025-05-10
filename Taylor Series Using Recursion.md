@@ -15,9 +15,20 @@ To write a Python program to evaluate a **Taylor Series** using **recursion**, w
 6. **Stop**
 
 ## 💻 PROGRAM:
+```
+def sum_digit(n):
+    if n <= 0:
+        return 0
+    return n % 10 + sum_digit(n // 10)
 
-ADD CODE HERE
+num = int(input("Enter a number: "))
+result = sum_digit(num)
+print("Sum of digits:", result)
+```
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/f6148915-1235-48b8-b1e8-81b8ccd672b5)
 
 ## RESULT
+Thus,the program is executed successfully
+
