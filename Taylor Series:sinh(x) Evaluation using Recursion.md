@@ -23,25 +23,23 @@ To write a Python program to evaluate the value of **sinh(x)** for **n terms** u
 
 ## 💻 PROGRAM:
 ```
-def fact(n):
-    if n <= 1:
-        return 1
-    return n * fact(n - 1)
-
-def sinh(x, n):
-    if n == 0:
-        return x
-    return (pow(x, 2*n + 1) / fact(2*n + 1)) + sinh(x, n - 1)
-
-x = float(input("Enter the value of x: "))
-n = int(input("Enter the number of terms: "))
-
-result = sinh(x, n)
-print("sinh(x) =", result)
+def fact(i):
+   if i==1 or i==0:
+       return 1
+   else:
+       return i*fact(i-1)
+def sine(x,n):
+  if n==0:
+    return x
+  else:
+    return ((((-1)**n)*pow(x,(2*n+1)))/(fact(2*n+1))) + sine(x,n-1)
+x=int(input())
+n=int(input())
+print(sine(x,n))
 ```
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/a97016f2-8a50-4f60-89a8-81078c1efe03)
+![Uploading image.png…]()
 
 ## RESULT
 Thus,the program is executed successfully
