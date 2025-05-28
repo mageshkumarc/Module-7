@@ -16,20 +16,25 @@ To write a Python program to evaluate a **Taylor Series** using **recursion**, w
 
 ## 💻 PROGRAM:
 ```
-def series(x, n):
-    if n == 0:
+def fact(i):
+    if i==1 or i==0:
         return 1
-    return (x**n) / n + series(x, n - 1)
-
-x = float(input("Enter the value of x: "))
-n = int(input("Enter the value of n: "))
-
-result = series(x, n)
-print("Taylor Series result:", result)
+    else:
+        return i*fact(i-1)
+        
+def ser(x,n):
+    if n==0:
+        return 1
+    else:
+        return ((x**n)/n) + ser(x,n-1)
+        
+x=int(input())
+n=int(input())
+print(ser(x,n))
 ```
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/3796c991-38bb-417a-be9e-c4fb8405bce0)
+![image](https://github.com/user-attachments/assets/47278a84-f611-4cab-83cd-90b8d86649c5)
 
 ## RESULT
 Thus,the program is executed successfully
